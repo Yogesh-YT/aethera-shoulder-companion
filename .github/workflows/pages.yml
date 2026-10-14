@@ -23,8 +23,8 @@ jobs:
     steps:
       - name: Check out site
         uses: actions/checkout@v4
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
+      - name: Verify static site entry point
+        run: test -f index.html
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
